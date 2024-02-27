@@ -1,5 +1,12 @@
 <odoo>
+    <record model="ir.actions.act_url" id="action_open_barcode_check_page">
+        <field name="name">Open barcode check page</field>
+        <field name="url">/check-barcodes</field>
+        <field name="target">new</field>
+    </record>
+
     <menuitem id="acs_menu" name="Access Control Management" action="acs_employee_action" sequence="1">
         <menuitem id="acs_employee_menu" name="Employees" action="acs_employee_action" sequence="1"/>
+        <menuitem id="acs_check_barcodes_page_menu_item" name="Check Barcodes" action="action_open_barcode_check_page" sequence="2"/>
     </menuitem>
 </odoo>
