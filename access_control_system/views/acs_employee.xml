@@ -59,4 +59,16 @@
         </field>
     </record>
 
+    <record id="acs_employee_view_search" model="ir.ui.view">
+        <field name="name">acs.employee.view.search</field>
+        <field name="model">acs.employee</field>
+        <field name="arch" type="xml">
+            <search string="">
+                <field name="name" />
+                <field name="reference" />
+                <field name="employee_id_number" />
+            </search>
+        </field>
+    </record>
+
 </odoo>
