@@ -1,0 +1,14 @@
+<odoo>
+    <data noupdate="1">
+    
+        <record id="seq_acs_employee" model="ir.sequence">
+            <field name="name">ACS Employee Sequence</field>
+            <field name="code">acs.employee.sequence</field>
+            <field name="prefix">EMP-</field>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>	
+    
+    </data>
+    
+</odoo>

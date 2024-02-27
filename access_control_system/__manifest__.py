@@ -19,6 +19,7 @@
 
     'data': [
         'security/ir.model.access.csv',
+        'data/sequence.xml',
         'views/acs_employee.xml',
         'views/menuitems.xml'
     ]
