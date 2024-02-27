@@ -20,18 +20,18 @@
                         <form>
                             <div class="w-50 m-auto">
                                 <h1 class="text-center mb-3">Check Barcode</h1>
-                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Barcode"/>
-                            </div>
-                            <div class="w-50 m-auto mt-5" id="result-div">
-                                <div class="alert alert-success" role="alert">
-                                    Approved
-                                </div>
-                                <div class="details">
-                                    <h5>Name: Example Name</h5>
-                                    <h5>Reference: EMP-0001</h5>
-                                </div>
+                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Scan the barcode for result"/>
                             </div>
                         </form>
+                        <div class="w-50 m-auto mt-3" id="result-div">
+                            <div class="alert alert-success" role="alert">
+                                Approved
+                            </div>
+                            <div class="details">
+                                <h5>Name: Example Name</h5>
+                                <h5>Reference: EMP-0001</h5>
+                            </div>
+                        </div>
                     </div>
                 </main>
             </body>
