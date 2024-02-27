@@ -21,6 +21,7 @@
         'security/ir.model.access.csv',
         'data/sequence.xml',
         'views/acs_employee.xml',
+        'views/portal_pages/check_barcode_page.xml',
         'views/menuitems.xml'
     ]
 }
