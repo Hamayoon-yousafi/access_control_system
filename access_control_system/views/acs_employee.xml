@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="acs_employee_action" model="ir.actions.act_window">
+        <field name="name">Employees</field>
+        <field name="res_model">acs.employee</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_empty_folder">
+                No employees were found!
+            </p>
+        </field>
+    </record>
+
+    <record id="acs_employee_view_tree" model="ir.ui.view">
+        <field name="name">acs.employee.view.tree</field>
+        <field name="model">acs.employee</field>
+        <field name="arch" type="xml">
+            <tree string="">
+                <field name="employee_id_number" />
+                <field name="name" />
+                <field name="father_name" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="acs_employee_view_form" model="ir.ui.view">
+        <field name="name">acs.employee.view.form</field>
+        <field name="model">acs.employee</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <field name="image" widget="image" class="oe_avatar"/>
+                    <group>
+                        <group name="employee_details" string="Employee Details">
+                            <field name="name" />
+                            <field name="father_name" />
+                            <field name="employee_id_number" />
+                            <field name="date_of_birth" />
+                        </group>       
+                        <group name="employee_contact" string="Employee Contact">
+                            <field name="address" />
+                            <field name="email" />
+                            <field name="phone" />
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+</odoo>

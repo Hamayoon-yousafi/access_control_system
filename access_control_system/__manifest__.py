@@ -19,7 +19,7 @@
 
     'data': [
         'security/ir.model.access.csv',
-        'views/views.xml',
-        'views/templates.xml',
+        'views/acs_employee.xml',
+        'views/menuitems.xml'
     ]
 }

@@ -1,2 +1,2 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_access_control_system_access_control_system,access_control_system.access_control_system,model_access_control_system_access_control_system,base.group_user,1,1,1,1
+access_acs_employee,access.acs.employee,model_acs_employee,base.group_user,1,1,1,1
