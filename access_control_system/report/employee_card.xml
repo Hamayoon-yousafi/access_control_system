@@ -27,7 +27,7 @@
                     <div style="page-break-after: always;"> 
                         <div class="row p-3">
                             <div class="col-8">
-                                <img class="mb-3" t-att-src="image_data_uri(data.image)" style="max-height:85pt;max-width:90%" alt="Employee Image"/>
+                                <img class="mb-3" t-if="data.image" t-att-src="image_data_uri(data.image)" style="max-height:85pt;max-width:90%" alt="Employee Image"/>
                                 <h5>
                                     Name: <t t-out="data.name"/>
                                 </h5>

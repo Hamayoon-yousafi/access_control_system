@@ -18,6 +18,7 @@
     'depends': ['base'],
 
     'data': [
+        'security/security.xml',
         'security/ir.model.access.csv',
         'data/sequence.xml',
         'views/acs_employee.xml',

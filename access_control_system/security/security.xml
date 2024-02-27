@@ -1,0 +1,23 @@
+<odoo>
+    <record model="ir.module.category" id="access_control_system">
+        <field name="name">Access Control System</field>
+        <field name="description">Category For Access Control System</field> 
+    </record>  
+
+    <record model="ir.module.category" id="category_access_control_system">
+        <field name="name">Access Control System</field> 
+        <field name="parent_id" ref="access_control_system"/> 
+    </record>
+        
+    <record model="res.groups" id="group_acs_user">
+        <field name="name">User</field>
+        <field name="category_id" ref="category_access_control_system"/>
+    </record>  
+    
+    <record model="res.groups" id="group_acs_adminstrator">
+        <field name="name">Administrator</field>
+        <field name="category_id" ref="category_access_control_system"/>
+        <field name="implied_ids" eval="[(4, ref('group_acs_user'))]"/>
+    </record>
+
+</odoo>
