@@ -1,0 +1,50 @@
+<odoo>
+    <record id="paperformat_employee" model="report.paperformat">
+        <field name="name">Employee Card Paperformat</field>
+        <field name="format">custom</field>
+        <field name="page_height">200</field>
+        <field name="page_width">90</field>
+        <field name="header_line" eval="False"/>
+        <field name="dpi">90</field>
+    </record>
+
+    <record id="action_report_employee_card" model="ir.actions.report">
+        <field name="name">Employee Card</field>
+        <field name="model">acs.employee</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">access_control_system.employee_card</field>
+        <field name="report_file">access_control_system.employee_card</field>
+        <field name="print_report_name">'%s card' % object.name</field>
+        <field name="binding_model_id" ref="model_acs_employee"/>
+        <field name="paperformat_id" ref="paperformat_employee"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    <template id="employee_card" name="Employee Card">
+        <t t-call="web.basic_layout">
+            <div class="page"> 
+                <t t-foreach="docs" t-as="data"> 
+                    <div style="page-break-after: always;"> 
+                        <div class="row p-3">
+                            <div class="col-8">
+                                <img class="mb-3" t-att-src="image_data_uri(data.image)" style="max-height:85pt;max-width:90%" alt="Employee Image"/>
+                                <h5>
+                                    Name: <t t-out="data.name"/>
+                                </h5>
+                                <h5>
+                                    Reference: <t t-out="data.reference"/>
+                                </h5>
+                                <h5>
+                                    ID Number: <t t-out="data.employee_id_number"/>
+                                </h5>
+                            </div>
+                            <div class="col-4">
+                                <span t-field="data.reference" t-options="{'widget': 'barcode', 'humanreadable': 0, 'width': 300, 'height': 100}"/> 
+                            </div>
+                        </div>
+                    </div>    
+                </t>
+            </div>
+        </t>
+    </template>
+</odoo>

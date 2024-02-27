@@ -22,6 +22,7 @@
         'data/sequence.xml',
         'views/acs_employee.xml',
         'views/portal_pages/check_barcode_page.xml',
+        'report/employee_card.xml',
         'views/menuitems.xml'
     ]
 }
